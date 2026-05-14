@@ -1,15 +1,8 @@
-/**
- * MongoDB Database Connection
- * Demonstrates: Database connections, environment variables
- */
-
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(
-      process.env.MONGODB_URI || 'mongodb://localhost:27017/polling-system'
-    );
+    const conn = await mongoose.connect(process.env.MONGODB_URI);
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
@@ -19,4 +12,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-
