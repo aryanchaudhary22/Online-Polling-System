@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import io from 'socket.io-client';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://online-polling-system-i9if.onrender.com';
 
 const ViewPoll = () => {
   const { id } = useParams();
@@ -25,7 +25,7 @@ const ViewPoll = () => {
     setShareLink(currentUrl);
 
     // Initialize Socket.IO
-    const newSocket = io('http://localhost:5001');
+    const newSocket = io('https://online-polling-system-i9if.onrender.com');
     setSocket(newSocket);
 
     // Join poll room

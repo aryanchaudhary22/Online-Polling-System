@@ -16,7 +16,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://online-polling-system-i9if.onrender.com';
 
 const COLORS = ['#0ea5e9', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7', '#d946ef'];
 
