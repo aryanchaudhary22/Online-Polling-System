@@ -1,62 +1,174 @@
-Polling System
+# Online Polling System
 
-A dynamic, full-stack web application designed to create, manage, and participate in real-time polls. This platform provides a seamless interface for users to gather opinions and visualize data instantly through a modern, responsive dashboard.
+A modern full-stack polling platform developed by Aryan Chaudhary that allows users to create, manage, and participate in real-time polls with an interactive and responsive user interface.
 
-🚀 Features
-User Authentication: Secure signup and login functionality to manage personal polls and voting history.
+The system enables instant vote tracking, dynamic poll creation, and live result visualization using the MERN stack architecture.
 
-Interactive Dashboard: A centralized hub to view active polls, track participation, and manage created content.
+---
 
-Live Voting: Real-time vote casting with immediate UI updates to reflect current standings.
+## 🚀 Features
 
-Poll Customization: Create polls with custom titles and multiple-choice options tailored to specific topics.
+- Create and manage custom polls
+- Real-time voting system
+- Dynamic poll result updates
+- Multiple-choice poll support
+- Responsive modern UI
+- MongoDB Atlas database integration
+- REST API architecture
+- Full-stack MERN implementation
 
-Data Visualization: Clear presentation of results to make data interpretation simple and effective.
+---
 
-🛠️ Tech Stack
-Frontend: React.js (Hooks, Functional Components)
+## 🛠️ Tech Stack
 
-Backend: Node.js & Express.js
+### Frontend
+- React.js
+- React Router
+- Axios
+- Tailwind CSS
 
-Database: MongoDB (NoSQL)
+### Backend
+- Node.js
+- Express.js
 
-Styling: CSS3 / Styled Components
+### Database
+- MongoDB Atlas
+- Mongoose
 
-API: RESTful Architecture
+### Other Tools
+- Git & GitHub
+- Render (Backend Deployment)
+- Vercel (Frontend Deployment)
 
-📦 Installation & Setup
-Clone the repository:
+---
 
-Bash
-git clone https://github.com/Priyanshu7644/polling-system.git
-Install Backend Dependencies:
+## 📦 Installation & Setup
 
-Bash
-cd polling-system/backend
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/aryanchaudhary22/Online-Polling-System.git
+```
+
+---
+
+### 2. Install Dependencies
+
+#### Frontend
+
+```bash
+cd client
 npm install
-Install Frontend Dependencies:
+```
 
-Bash
-cd ../frontend
+#### Backend
+
+```bash
+cd server
 npm install
-Environment Configuration:
-Create a .env file in the backend directory and add your MongoDB URI and Port:
+```
 
-Code snippet
+---
+
+### 3. Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```env
+PORT=5001
 MONGO_URI=your_mongodb_connection_string
-PORT=5000
-Run the Application:
+```
 
-Start Backend: npm start (inside backend folder)
+---
 
-Start Frontend: npm start (inside frontend folder)
+### 4. Run Application
 
-📂 Project Structure
-/frontend: React components, state management, and UI logic.
+#### Start Backend
 
-/backend: API routes, controllers, and database models.
+```bash
+cd server
+npm start
+```
 
-/models: Schema definitions for Users and Polls.
+#### Start Frontend
 
-🤝 Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request to help improve the functionality and design of this system.
+```bash
+cd client
+npm start
+```
+
+---
+
+## 📂 Project Structure
+
+```bash
+Online-Polling-System/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│
+├── server/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   ├── utils/
+│
+├── README.md
+├── package.json
+```
+
+---
+
+## 🌐 Deployment
+
+### Frontend
+Deployed using Vercel
+
+### Backend
+Deployed using Render
+
+### Database
+MongoDB Atlas Cloud Database
+
+---
+
+## 👨‍💻 Developer
+
+### Aryan Chaudhary
+
+- B.Tech CSE Student
+- Full Stack Web Development Learner
+- MERN Stack Enthusiast
+- Music Artist & Creative Developer
+
+GitHub:
+https://github.com/aryanchaudhary22
+
+LinkedIn:
+https://linkedin.com/in/aryanchaudhary22
+
+---
+
+## 📈 Future Improvements
+
+- User authentication system
+- JWT authorization
+- Live socket-based updates
+- Poll analytics dashboard
+- Poll expiration timers
+- Shareable public links
+
+---
+
+## ⭐ Contributing
+
+Contributions are welcome.
+
+Feel free to fork the repository, create issues, and submit pull requests to improve the project.
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
