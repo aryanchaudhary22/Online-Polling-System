@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import io from 'socket.io-client';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://online-polling-system-i9if.onrender.com';
 
 const Home = () => {
   const [polls, setPolls] = useState([]);
@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     // Initialize Socket.IO connection
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://online-polling-system-i9if.onrender.com');
     setSocket(newSocket);
 
     // Listen for new polls
