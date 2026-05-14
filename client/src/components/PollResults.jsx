@@ -31,7 +31,7 @@ const PollResults = () => {
     fetchPoll();
 
     // Initialize Socket.IO for real-time updates
-    const newSocket = io('http://localhost:5001');
+    const newSocket = io('https://online-polling-system-i9if.onrender.com/api/polls');
     setSocket(newSocket);
 
     // Join poll room
