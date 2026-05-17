@@ -68,7 +68,7 @@ app.use('/api/polls', pollRoutes);
 pollRoutes.setSocketIO(io);
 
 // Serve static files from React app -----------------------------------------------------------
-const buildPath = path.join(__dirname, '../client/build');
+const buildPath = path.join(__dirname, "../client/build");
 
 app.use(express.static(buildPath));
 
@@ -106,9 +106,9 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Server is running' });
 });
 
-// Catch all handler for React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
+// Catch all handler for React app ----------------------------------------
+app.get(/^\/(?!api).*/, (req, res) => {
+  res.sendFile(path.join(buildPath, "index.html"));
 });
 
 
