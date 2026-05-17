@@ -69,7 +69,7 @@ const CreatePoll = () => {
         options: formData.options.filter(opt => opt.trim())
       };
 
-      const response = await axios.post(`${API_URL}/polls`, pollData);
+      const response = await axios.post(`${API_URL}/api/polls`, pollData);
       
       if (response.data.success) {
         navigate(`/poll/${response.data.poll.id}`);
