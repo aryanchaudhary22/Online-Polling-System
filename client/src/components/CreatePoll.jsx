@@ -70,6 +70,8 @@ const CreatePoll = () => {
       };
 
       const response = await axios.post(`${API_URL}/api/polls`, pollData);
+
+      console.log(response.data);
       
       if (response.data.success) {
         navigate(`/poll/${response.data.poll.id || response.data.poll._id}`);
