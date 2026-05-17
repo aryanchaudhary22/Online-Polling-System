@@ -31,7 +31,7 @@ const PollResults = () => {
     fetchPoll();
 
     // Initialize Socket.IO for real-time updates
-    const newSocket = io('https://online-polling-system-i9if.onrender.com/api/polls');
+    const newSocket = io('https://online-polling-system-i9if.onrender.com');
     setSocket(newSocket);
 
     // Join poll room
@@ -39,7 +39,7 @@ const PollResults = () => {
 
     // Listen for poll updates
     newSocket.on('poll-updated', (updatedPoll) => {
-      if (updatedPoll.id === id) {
+      if (updatedPoll._id === id || updatedPoll.id === id) {
         setPoll(updatedPoll);
         updateChartData(updatedPoll);
       }
