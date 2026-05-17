@@ -56,9 +56,9 @@ const PollResults = () => {
 
     console.log("API RESPONSE:", response.data);
 
-    if (response.data.poll) {
-      setPoll(response.data.poll);
-      updateChartData(response.data.poll);
+    if (response.data) {
+      setPoll(response.data);
+      updateChartData(response.data);
     } else {
       console.log("NO POLL FOUND IN RESPONSE");
     }
