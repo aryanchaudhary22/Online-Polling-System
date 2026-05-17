@@ -93,6 +93,8 @@ const PollResults = () => {
     );
   }
 
+  console.log("POLL DATA:", poll);
+
   if (!poll) {
     return (
       <div className="max-w-5xl mx-auto px-4 py-8">
