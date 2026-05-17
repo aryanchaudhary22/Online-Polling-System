@@ -51,16 +51,24 @@ const PollResults = () => {
   }, [id]);
 
   const fetchPoll = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/api/polls/${id}`);
+  try {
+    const response = await axios.get(`${API_URL}/api/polls/${id}`);
+
+    console.log("API RESPONSE:", response.data);
+
+    if (response.data.poll) {
       setPoll(response.data.poll);
       updateChartData(response.data.poll);
-    } catch (error) {
-      console.error('Error fetching poll:', error);
-    } finally {
-      setLoading(false);
+    } else {
+      console.log("NO POLL FOUND IN RESPONSE");
     }
-  };
+
+  } catch (error) {
+    console.error('Error fetching poll:', error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const updateChartData = (pollData) => {
     if (!pollData || !pollData.options) return;
@@ -93,7 +101,7 @@ const PollResults = () => {
     );
   }
 
-  console.log("POLL DATA:", poll);
+  console.log("POLL DATA:", poll); 
 
   if (!poll) {
     return (
