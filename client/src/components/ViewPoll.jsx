@@ -94,7 +94,7 @@ const ViewPoll = () => {
 
     try {
       // Submit vote via HTTP (Socket.IO update will be emitted from server)
-      await axios.post(`${API_URL}/polls/${id}/vote`, {
+      await axios.post(`${API_URL}/api/polls/${id}/vote`, {
         optionIndex,
         isAnonymous: poll.isAnonymous
       });
