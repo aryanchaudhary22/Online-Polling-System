@@ -67,8 +67,10 @@ app.use('/api/polls', pollRoutes);
 // Pass Socket.IO instance to routes for real-time updates
 pollRoutes.setSocketIO(io);
 
-// Serve static files from React app
-app.use(express.static(path.join(__dirname, '../client/build')));
+// Serve static files from React app -----------------------------------------------------------
+const buildPath = path.join(__dirname, '../client/build');
+
+app.use(express.static(buildPath));
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {
@@ -106,8 +108,9 @@ app.get('/api/health', (req, res) => {
 
 // Catch all handler for React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
+
 
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
