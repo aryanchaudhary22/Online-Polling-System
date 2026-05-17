@@ -72,7 +72,7 @@ const CreatePoll = () => {
       const response = await axios.post(`${API_URL}/api/polls`, pollData);
       
       if (response.data.success) {
-        navigate(`/poll/${response.data.poll.id}`);
+        navigate(`/poll/${response.data.poll._id}`);
       }
     } catch (error) {
       if (error.response?.data?.errors) {
