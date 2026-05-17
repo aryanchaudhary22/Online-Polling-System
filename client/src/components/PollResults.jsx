@@ -52,7 +52,7 @@ const PollResults = () => {
 
   const fetchPoll = async () => {
     try {
-      const response = await axios.get(`${API_URL}/polls/${id}`);
+      const response = await axios.get(`${API_URL}/api/polls/${id}`);
       setPoll(response.data.poll);
       updateChartData(response.data.poll);
     } catch (error) {

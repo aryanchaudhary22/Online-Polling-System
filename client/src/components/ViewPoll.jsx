@@ -33,7 +33,7 @@ const ViewPoll = () => {
 
     // Listen for poll updates
     newSocket.on('poll-updated', (updatedPoll) => {
-      if (updatedPoll.id === id) {
+      if (updatedPoll._id === id || updatedPoll.id === id) {
         setPoll(updatedPoll);
       }
     });
