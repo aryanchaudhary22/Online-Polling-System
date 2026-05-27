@@ -38,7 +38,6 @@ The system enables instant vote tracking, dynamic poll creation, and live result
 ### Other Tools
 - Git & GitHub
 - Render (Backend Deployment)
-- Vercel (Frontend Deployment)
 
 ---
 
@@ -66,17 +65,6 @@ npm install
 ```bash
 cd server
 npm install
-```
-
----
-
-### 3. Environment Variables
-
-Create a `.env` file inside the `server` folder.
-
-```env
-PORT=5001
-MONGO_URI=your_mongodb_connection_string
 ```
 
 ---
@@ -121,11 +109,6 @@ Online-Polling-System/
 ---
 
 ## 🌐 Deployment
-
-### Frontend
-Deployed using Vercel
-
-### Backend
 Deployed using Render
 
 ### Database
@@ -141,9 +124,6 @@ MongoDB Atlas Cloud Database
 - Full Stack Web Development Learner
 - MERN Stack Enthusiast
 - Music Artist & Creative Developer
-
-GitHub:
-https://github.com/aryanchaudhary22
 
 LinkedIn:
 https://linkedin.com/in/aryanchaudhary22
